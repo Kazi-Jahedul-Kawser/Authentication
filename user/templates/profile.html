@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{type}}{% endblock title %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="p-5 border-2 border-dark mt-4 mx-auto" style="width:50%; border: 15px solid green;">
+    <h4 class="text-center text-info" style="text-decoration: underline gray;">User Details</h4>
+    <p ><span style="font-size: 1.2em;" class="text-primary">User Name</span>  :  {{user.username}}</p>
+    <p><span style="font-size: 1.2em;" class="text-primary">First Name</span> :  {{user.first_name}}</p>
+    <p><span style="font-size: 1.2em;" class="text-primary">Last Name</span> :  {{user.last_name}}</p>
+    <p><span style="font-size: 1.2em;" class="text-primary">Email</span> :  {{user.email}}</p>
+    <a class="btn btn-secondary" href="{% url "update" %}">Update Profile</a>
+</div>
+
+{% endblock content %}
