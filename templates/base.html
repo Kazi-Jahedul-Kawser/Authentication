@@ -13,7 +13,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav ms-auto pe-3">
       {% if request.user.is_authenticated %}
       <li class="nav-item active">
         <a class="nav-link" href="{% url "profile" %}">Profile</a>
@@ -27,9 +27,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url "registration" %}">Registration</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#">Disabled</a>
       </li>
       {% endif %}
     </ul>

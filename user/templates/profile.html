@@ -10,6 +10,7 @@
     <p><span style="font-size: 1.2em;" class="text-primary">Last Name</span> :  {{user.last_name}}</p>
     <p><span style="font-size: 1.2em;" class="text-primary">Email</span> :  {{user.email}}</p>
     <a class="btn btn-secondary" href="{% url "update" %}">Update Profile</a>
+    <a class="btn btn-dark" href="{% url "change_password" %}">Change Password</a>
 </div>
 
 {% endblock content %}
