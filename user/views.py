@@ -13,12 +13,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 # Create your views here.
-@method_decorator(login_required,name='dispatch')
-class ProfileView(DetailView):
-    model = CustomUser
-    template_name = "profile.html"
-    def get_object(self, queryset = None):
-        return self.request.user
+@login_required
+def profile(request):
+    return render(request, 'profile.html')
 def home(request):
     return render(request, 'home.html')
 def userlogout(request):
