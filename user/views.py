@@ -119,27 +119,7 @@ class UserDataUpdateView(UpdateView):
         context = super().get_context_data(**kwargs)
         context["type"] = "Update Profile" 
         return context
-# @method_decorator(login_required,name='dispatch')    
-# class ChangePasswordView(FormView):
-#     form_class = PasswordChangeForm
-#     template_name = "registration.html"
-#     success_url = reverse_lazy('profile')
-    
-#     def get_form_kwargs(self):
-#         kargs = super().get_form_kwargs()
-#         kargs['user'] = self.request.user
-#         return kargs
-#     def form_valid(self, form):
-#         form.save()
-#         messages.success(self.request, "Successfully Updated Password")
-#         return super().form_valid(form)
-#     def form_invalid(self, form):
-#         messages.error(self.request, "Plese enter Valid Information")
-#         return super().form_invalid(form)
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["type"] = "Password" 
-#         return context
+
     
     
 
